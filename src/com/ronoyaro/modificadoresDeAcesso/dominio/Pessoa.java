@@ -1,4 +1,4 @@
-package com.ronoyaro.modificadores_de_acesso.dominio;
+package com.ronoyaro.modificadoresDeAcesso.dominio;
 
 public class Pessoa {
     private String nome;

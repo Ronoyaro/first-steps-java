@@ -1,6 +1,6 @@
-package com.ronoyaro.modificadores_de_acesso.test;
+package com.ronoyaro.modificadoresDeAcesso.test;
 
-import com.ronoyaro.modificadores_de_acesso.dominio.Pessoa;
+import com.ronoyaro.modificadoresDeAcesso.dominio.Pessoa;
 
 public class PessoaTest {
     public static void main(String[] args) {
