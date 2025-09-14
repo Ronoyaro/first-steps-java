@@ -10,13 +10,12 @@ public class Professor {
     }
 
     public Professor(String nome, String especialidade) {
-        this.nome = nome;
-        this.especialidade = especialidade;
+       this(nome);
+       this.especialidade = especialidade;
     }
 
     public Professor(String nome, String especialidade, Seminario[] seminarios) {
-        this.nome = nome;
-        this.especialidade = especialidade;
+        this(nome, especialidade);
         this.seminarios = seminarios;
     }
 

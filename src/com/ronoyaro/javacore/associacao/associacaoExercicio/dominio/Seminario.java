@@ -13,22 +13,20 @@ public class Seminario {
         this.titulo = titulo;
     }
 
-    public Seminario(String titulo, Local local){
-        this.titulo = titulo;
+    public Seminario(String titulo, Local local) {
+        this(titulo);
         this.local = local;
     }
 
     public Seminario(String titulo, Aluno[] alunos) {
-        this.titulo = titulo;
+        this(titulo);
         this.alunos = alunos;
     }
 
     public Seminario(String titulo, Aluno[] alunos, Local local) {
-        this.titulo = titulo;
-        this.alunos = alunos;
+        this(titulo, alunos);
         this.local = local;
     }
-
 
     public void imprime() {
         System.out.println("Titulo do seminário: " + this.titulo);
@@ -39,8 +37,8 @@ public class Seminario {
         for (Aluno aluno : this.alunos) {
             System.out.println(aluno.getNome());
         }
-        if(this.professor == null)return;
-        System.out.println("Com o professor: " +this.professor.getNome());
+        if (this.professor == null) return;
+        System.out.println("Com o professor: " + this.professor.getNome());
     }
 
     public String getTitulo() {
@@ -59,7 +57,7 @@ public class Seminario {
         this.local = local;
     }
 
-    public void setProfessor(Professor professor){
+    public void setProfessor(Professor professor) {
         this.professor = professor;
     }
 

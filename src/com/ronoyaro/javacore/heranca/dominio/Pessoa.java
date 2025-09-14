@@ -1,9 +1,22 @@
 package com.ronoyaro.javacore.heranca.dominio;
 
 public class Pessoa {
-    private String nome;
-    private int cpf;
-    private Endereco endereco;
+    // Protected permite que os atributos e metodos sejam acessiveis se estiverem
+    //dentro do mesmo pacote
+    //Fora do pacote apenas se for uma subclasse (extends)
+    protected String nome;
+    protected int cpf;
+    protected Endereco endereco;
+
+
+    public Pessoa(String nome){
+        this.nome = nome;
+    }
+
+    public Pessoa(String nome, int cpf){
+        this(nome);
+        this.cpf = cpf;
+    }
 
     public void imprime(){
         System.out.println(this.nome);

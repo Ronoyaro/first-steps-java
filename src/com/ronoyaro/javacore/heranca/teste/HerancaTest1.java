@@ -14,19 +14,19 @@ public class HerancaTest1 {
         endereco2.setCep("123456");
         endereco2.setRua("Miami City");
 
-        Pessoa pessoa1 = new Pessoa();
-        pessoa1.setNome("Ronald");
+        Pessoa pessoa1 = new Pessoa("Ronald", 27);
         pessoa1.setCpf(123456);
         pessoa1.setEndereco(endereco);
         pessoa1.imprime();
 
-        Funcionario funcionario = new Funcionario();
-        funcionario.setNome("Dexter");
+        Funcionario funcionario = new Funcionario("Dexter");
         funcionario.setCpf(253560);
         funcionario.setEndereco(endereco2);
         funcionario.setSalario(3000d);
 
         funcionario.imprime();
+
+        funcionario.relatorioPagamento();
 
     }
 }
