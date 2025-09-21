@@ -11,6 +11,8 @@ public class ImpostoTeste {
 
         CalculadoraDeImposto.calcularImposto(computador);
         System.out.println("-------------------------");
+
+        //imprimo o valor a validade de produto utilizando o instanceof
         CalculadoraDeImposto.calcularImposto(tomate);
     }
 }
