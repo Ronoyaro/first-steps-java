@@ -7,7 +7,7 @@ public class Funcionario extends Pessoa {
         return salario;
     }
 
-    public Funcionario(String nome){
+    public Funcionario(String nome) {
         super(nome);
     }
 
