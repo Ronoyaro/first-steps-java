@@ -1,11 +1,11 @@
-🖥️ Exercícios em Java
+🖥️ Curso de Java
 ---------------------------------------------------------------------------------
-Este repositório reúne os exercícios de Java que venho praticando no meu aprendizado da linguagem.
+Este repositório reúne os conceitos aprendidos em Java que venho praticando.
 A ideia é simples: guardar tudo o que estudo aqui no GitHub para acompanhar minha evolução e ter um lugar centralizado com o código.
 
 📂 Estrutura
 ---------------------------------------------------------------------------------
-Os exercícios ficam organizados dentro da pasta src/newExercise
+Os conceitos ficam subdividos em packages organizados dentro da pasta src/com/ronoyaro
 
 🚀 Conteúdos já explorados
 ---------------------------------------------------------------------------------
