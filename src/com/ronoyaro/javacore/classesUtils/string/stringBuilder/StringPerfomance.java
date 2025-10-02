@@ -1,4 +1,4 @@
-package com.ronoyaro.javacore.string.stringBuilder;
+package com.ronoyaro.javacore.classesUtils.string.stringBuilder;
 
 public class StringPerfomance {
 

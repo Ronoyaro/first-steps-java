@@ -1,4 +1,4 @@
-package com.ronoyaro.javacore.string.teste;
+package com.ronoyaro.javacore.classesUtils.string.teste;
 
 public class StringTeste {
     public static void main(String[] args) {
