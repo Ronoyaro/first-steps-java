@@ -6,9 +6,9 @@ import java.util.Locale;
 
 public class LocaleTest {
     public static void main(String[] args) {
-        Locale localeItaly = new Locale("it", "IT");
-        Locale localeCH = new Locale("it","CH");
-        Locale localeJP = new Locale("ja","JP");
+        Locale localeItaly = Locale.of("it", "IT");
+        Locale localeCH = Locale.of("it","CH");
+        Locale localeJP = Locale.of("ja","JP");
         Calendar calendary = Calendar.getInstance();
         DateFormat dt1 = DateFormat.getDateInstance(DateFormat.FULL, localeItaly);
         DateFormat dt2 = DateFormat.getDateInstance(DateFormat.FULL, localeCH);

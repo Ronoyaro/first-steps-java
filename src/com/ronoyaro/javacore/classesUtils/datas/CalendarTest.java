@@ -23,5 +23,15 @@ public class CalendarTest {
         calendary.roll(Calendar.HOUR, 12);
         Date date2 = calendary.getTime();
         System.out.println(date2);
+
+        System.out.println(Calendar.getInstance().getTime());
+
+        Calendar c2 = Calendar.getInstance();
+        c2.add(Calendar.HOUR, 20);
+        System.out.println(c2.getTime());
+       c2.add(Calendar.HOUR, 10);
+        System.out.println(c2.getTime());
+
+
     }
 }
