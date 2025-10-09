@@ -11,7 +11,7 @@ public class CalendarTest {
         System.out.println(date);
 
         if (calendary.getFirstDayOfWeek() == Calendar.SUNDAY) {
-            System.out.println("Domingao eh praiana");
+            System.out.println("is sunday!");
         }
         System.out.println(calendary.get(Calendar.DAY_OF_WEEK));
         System.out.println(calendary.get(Calendar.DAY_OF_MONTH));
