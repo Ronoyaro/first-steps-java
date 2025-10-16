@@ -1,4 +1,4 @@
-package com.ronoyaro.javacore.IOs;
+package com.ronoyaro.javacore.IO;
 
 import java.io.BufferedReader;
 import java.io.File;
