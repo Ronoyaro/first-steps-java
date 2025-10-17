@@ -1,9 +1,6 @@
 package com.ronoyaro.javacore.classesUtils.datas;
 
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Month;
+import java.time.*;
 
 public class LocalDateTimeTest01 {
     public static void main(String[] args) {
@@ -22,7 +19,8 @@ public class LocalDateTimeTest01 {
 
         System.out.println(LocalDateTime.now());
 
-
+        Instant instant = ldt1.toInstant(ZoneOffset.UTC);
+        System.out.println(instant);
 
 
     }
