@@ -17,16 +17,36 @@ public class BasicFilesAttributesTest02 {
         //chamando o Files.readAttributes
         BasicFileAttributes readAttributes = Files.readAttributes(path, BasicFileAttributes.class);
 
-       //FileTime para retornar quando os arquivos foram criados, acessados e modificados
+        //FileTime para retornar quando os arquivos foram criados, acessados e modificados
 
         FileTime creationTime = readAttributes.creationTime();
         FileTime lastAccessTime = readAttributes.lastAccessTime();
         FileTime lastModifiedTime = readAttributes.lastModifiedTime();
 
+        System.out.println(creationTime);
+        System.out.println(lastAccessTime);
+        System.out.println(lastModifiedTime);
+
+        System.out.println("----------------------------------------");
         //Quando preciso setar novos valores utilizados a view, BasicFileAttributesView
         //getFilesAttributeView tem um metodo chamado setTimes recebendo o basicFileAttrView.class
 
         BasicFileAttributeView attributeView = Files.getFileAttributeView(path, BasicFileAttributeView.class);
+
+        FileTime newLastAcessedTime = FileTime.fromMillis(System.currentTimeMillis());
+
+        attributeView.setTimes(lastModifiedTime, newLastAcessedTime, creationTime);
+
+        //Lendo o arquivo novamente
+        creationTime = attributeView.readAttributes().creationTime();
+        lastAccessTime = attributeView.readAttributes().lastAccessTime();
+        lastModifiedTime = attributeView.readAttributes().lastModifiedTime();
+
+        System.out.println(creationTime);
+        System.out.println(lastAccessTime);
+        System.out.println(lastModifiedTime);
+
+
 
 
 
