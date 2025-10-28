@@ -29,5 +29,6 @@ public class ListTest01 {
         }
 
         nomes.remove("Zelda");
+
     }
 }
