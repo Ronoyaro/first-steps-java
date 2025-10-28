@@ -9,5 +9,7 @@ public class EqualsTest01 {
 
         boolean equals = s1.equals(s2);
         System.out.println(equals);
+
+
     }
 }
