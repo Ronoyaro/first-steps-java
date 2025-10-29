@@ -8,6 +8,7 @@ public class Manga implements Comparable<Manga> {
     private Long id;
     private String titulo;
     private double preco;
+    private int quantidade;
 
 
     public Manga(@NotNull Long id, @NotNull String titulo, double preco) {
@@ -18,10 +19,16 @@ public class Manga implements Comparable<Manga> {
         this.preco = preco;
     }
 
+    public Manga(Long id, String titulo, double preco, int quantidade) {
+        this(id, titulo, preco);
+        this.quantidade = quantidade;
+    }
+
     @Override
     public int compareTo(@NotNull Manga o) {
         return this.id.compareTo(o.getId());
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -41,7 +48,20 @@ public class Manga implements Comparable<Manga> {
                 "id=" + id +
                 ", titulo='" + titulo + '\'' +
                 ", preco=" + preco +
+                ", quantidade=" + quantidade +
                 '}';
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+    public void setQuantidade(int quantidade) {
+        this.quantidade = quantidade;
     }
 
     public Long getId() {
