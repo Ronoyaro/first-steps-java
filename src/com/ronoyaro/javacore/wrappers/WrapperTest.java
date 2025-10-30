@@ -40,7 +40,6 @@ public class WrapperTest {
         System.out.println(Character.isUpperCase(charW));
         System.out.println(Character.toLowerCase(charW));
         System.out.println(charW);
-
     }
 
 }
