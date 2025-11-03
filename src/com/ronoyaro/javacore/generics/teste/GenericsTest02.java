@@ -1,6 +1,4 @@
-package com.ronoyaro.javacore.generics;
-
-import com.sun.jdi.PathSearchingVirtualMachine;
+package com.ronoyaro.javacore.generics.teste;
 
 import java.util.ArrayList;
 import java.util.List;

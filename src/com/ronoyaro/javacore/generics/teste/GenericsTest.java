@@ -1,4 +1,4 @@
-package com.ronoyaro.javacore.generics;
+package com.ronoyaro.javacore.generics.teste;
 
 import com.ronoyaro.javacore.colecoes.dominio.Consumidor;
 

@@ -1,4 +1,4 @@
-package com.ronoyaro.javacore.generics;
+package com.ronoyaro.javacore.generics.teste;
 
 import java.util.List;
 
