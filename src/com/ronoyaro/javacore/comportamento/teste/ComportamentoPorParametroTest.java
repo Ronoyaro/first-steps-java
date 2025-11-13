@@ -6,6 +6,7 @@ import com.ronoyaro.javacore.comportamento.dominio.Carro;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 public class ComportamentoPorParametroTest {
     public static void main(String[] args) {
@@ -45,4 +46,6 @@ public class ComportamentoPorParametroTest {
         }
         return novaLista;
     }
+
+
 }
