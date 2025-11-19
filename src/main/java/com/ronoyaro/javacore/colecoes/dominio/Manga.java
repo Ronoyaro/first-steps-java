@@ -1,6 +1,5 @@
 package com.ronoyaro.javacore.colecoes.dominio;
 
-import org.jetbrains.annotations.NotNull;
 
 import java.util.Objects;
 
@@ -11,7 +10,7 @@ public class Manga implements Comparable<Manga> {
     private int quantidade;
 
 
-    public Manga(@NotNull Long id, @NotNull String titulo, Double preco) {
+    public Manga(Long id,String titulo, Double preco) {
         Objects.requireNonNull(id, "ID não pode ser nulo");
         Objects.requireNonNull(titulo, "Titulo não pode ser nulo");
         this.id = id;
@@ -25,7 +24,7 @@ public class Manga implements Comparable<Manga> {
     }
 
     @Override
-    public int compareTo(@NotNull Manga o) {
+    public int compareTo( Manga o) {
         return this.id.compareTo(o.getId());
     }
 
