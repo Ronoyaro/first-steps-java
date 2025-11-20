@@ -6,6 +6,7 @@ import lombok.Value;
 @Value
 @Builder
 public class Producer {
+    //Mapeamento da nossa entidade do banco
     private Integer id;
     private String name;
 }
