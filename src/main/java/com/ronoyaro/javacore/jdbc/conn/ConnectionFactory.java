@@ -9,8 +9,6 @@ public class ConnectionFactory {
         String url = "jdbc:mysql://localhost:3306/anime_store";
         String username = "root";
         String password = "root";
-            return DriverManager.getConnection(url, username, password);
-
+        return DriverManager.getConnection(url, username, password);
     }
-
 }

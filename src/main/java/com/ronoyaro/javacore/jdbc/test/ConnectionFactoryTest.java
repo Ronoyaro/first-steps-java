@@ -6,8 +6,8 @@ import com.ronoyaro.javacore.jdbc.repository.ProducerRepository;
 
 public class ConnectionFactoryTest {
     public static void main(String[] args) {
-        Producer producer = Producer.ProducerBuilder.aProducer()
-                .name("NHK")
+        Producer producer = Producer.builder()
+                .name("Toei")
                 .build();
         ProducerRepository.save(producer);
     }
