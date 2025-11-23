@@ -4,10 +4,7 @@ import com.ronoyaro.javacore.jdbc.conn.ConnectionFactory;
 import com.ronoyaro.javacore.jdbc.dominio.Producer;
 import lombok.extern.log4j.Log4j2;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -50,6 +47,32 @@ public class ProducerRepository {
     public static List<Producer> findAll() {
         return findByName("");
     }
+
+    public static List<Producer> preparedStatementFindAll() {
+        return preparedStatementFindByName("");
+    }
+
+    public static List<Producer> preparedStatementFindByName(String name) {
+        String sql = "SELECT * FROM anime_store.producer where name like ?;";
+        List<Producer> producers = new ArrayList<>();
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement ps = conn.prepareStatement(sql);) {
+            ps.setString(1, String.format("%%%s%%", name)); //SELECT * FROM anime_store.producer where name like %name%;
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Producer producer = Producer.builder()
+                        .id(rs.getInt("id"))
+                        .name(rs.getString("name"))
+                        .build();
+                producers.add(producer);
+            }
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return producers;
+    }
+
 
     public static List<Producer> findByName(String name) {
         String sql = "SELECT * FROM anime_store.producer where name like '%%%s%%';" //%anyHere% dessa forma eu consigo passar um valor para dentro

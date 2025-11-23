@@ -25,6 +25,14 @@ public class ProducerService {
         return ProducerRepository.findAll();
     }
 
+    public static List<Producer> preparedStatementFindByName(String name) {
+        return ProducerRepository.preparedStatementFindByName(name);
+    }
+
+    public static List<Producer> preparedStatementFindAll() {
+        return ProducerRepository.preparedStatementFindByName("");
+    }
+
     public static List<Producer> findByName(String name) {
         return ProducerRepository.findByName(name);
     }

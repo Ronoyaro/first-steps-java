@@ -19,10 +19,20 @@ public class ConnectionFactoryTest {
 //      ProducerService.save(producer1);
 //      ProducerService.delete(11);
 //      ProducerService.update(produceToUpdate);
-        List<Producer> producerList = ProducerService.findAll();
-        log.info("Producers found: '{}'", producerList);
 
-        List<Producer> name = ProducerService.findByName("Wit");
-        log.info("Producer found: '{}'", name);
+
+
+
+//        List<Producer> producerList = ProducerService.findAll();
+//        log.info("Producers found: '{}'", producerList);
+//
+//        List<Producer> name = ProducerService.findByName("Wit");
+//        log.info("Producer found: '{}'", name);
+
+//        List<Producer> producers = ProducerService.preparedStatementFindByName("Wit");
+        List<Producer> producers2 = ProducerService.preparedStatementFindAll();
+//        log.info("Producer find '{}' ", producers);
+        log.info("Producer find '{}' ", producers2);
+
     }
 }
